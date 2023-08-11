@@ -58,6 +58,4 @@ public class UseStringMethods {
         useStringMethods.countChar(str,'s');
         useStringMethods.printContainWords(str, "ss");
     }
-
-
 }
