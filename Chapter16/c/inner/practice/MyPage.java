@@ -1,7 +1,7 @@
 package lang.thegodofjava.Chapter16.c.inner.practice;
 
 public class MyPage {
-    InputBox inputBox;
+    static InputBox inputBox;
 
     public static void main(String[] args) {
         MyPage myPage = new MyPage();
