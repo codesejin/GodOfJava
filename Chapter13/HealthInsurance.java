@@ -27,20 +27,30 @@ public enum HealthInsurance {
         return ratio;
     }
 
+//    public static HealthInsurance getHealthInsurance(int salary) {
+//        if(salary<1000) {
+//            return LEVEL_ONE;
+//        } else if(salary<2000) {
+//            return LEVEL_TWO;
+//        } else if(salary<3000) {
+//            return LEVEL_THREE;
+//        } else if(salary<4000) {
+//            return LEVEL_FOUR;
+//        } else if(salary<5000) {
+//            return LEVEL_FIVE;
+//        } else {
+//            return LEVEL_SIX;
+//        }
+//    }
+    // 위의 코드보다 더 깔끔함
     public static HealthInsurance getHealthInsurance(int salary) {
-        if(salary<1000) {
-            return LEVEL_ONE;
-        } else if(salary<2000) {
-            return LEVEL_TWO;
-        } else if(salary<3000) {
-            return LEVEL_THREE;
-        } else if(salary<4000) {
-            return LEVEL_FOUR;
-        } else if(salary<5000) {
-            return LEVEL_FIVE;
-        } else {
-            return LEVEL_SIX;
+        for (HealthInsurance insurance : HealthInsurance.values()) {
+            if (salary < insurance.maxSalary) {
+                return insurance;
+            }
         }
+        // 기본적으로 LEVEL_ONE을 리턴하거나 예외 처리 등을 추가할 수 있음
+        return LEVEL_ONE;
     }
 
     public static void  main(String []args) {
@@ -51,7 +61,7 @@ public enum HealthInsurance {
         insurances[2]=HealthInsurance.getHealthInsurance(salaryArray[2]);
 
         for(int loop=0;loop<3;loop++) {
-            System.out.println(salaryArray[loop]+"="+insurances[loop]+","+insurances[loop].getRatio());
+            System.out.println(salaryArray[loop]+"= "+insurances[loop]+", "+insurances[loop].getRatio());
         }
     }
 }
