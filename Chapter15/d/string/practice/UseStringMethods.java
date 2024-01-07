@@ -1,5 +1,7 @@
 package lang.thegodofjava.Chapter15.d.string.practice;
 
+import java.nio.charset.Charset;
+
 public class UseStringMethods {
 
     public void printWords(String str){
