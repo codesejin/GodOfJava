@@ -1,6 +1,7 @@
 package lang.thegodofjava.Chapter22.study;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ListSample {
     public static void main(String[] args) {
@@ -89,6 +90,5 @@ public class ListSample {
         for (int loop = 0; loop < list.size(); loop++) {
             System.out.println("list.get(" + loop + ")=" + list.get(loop));
         }
-
     }
 }
