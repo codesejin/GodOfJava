@@ -1,7 +1,6 @@
 package lang.thegodofjava.Chapter26.study;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 public class FileFilterSample {
     public static void main(String[] args) {
@@ -15,7 +14,7 @@ public class FileFilterSample {
         try {
             file = new File(pathName);
 //            File[] mainFileList = file.listFiles();
-            File[] mainFileList = file.listFiles(new JPGFilenameFilter());
+            File[] mainFileList = file.listFiles(new JPGFileFilter());
             for (File tempFile: mainFileList) {
                 System.out.println(tempFile.getName());
             }
