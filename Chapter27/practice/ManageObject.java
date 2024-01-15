@@ -8,8 +8,8 @@ public class ManageObject {
     public static void main(String[] args) {
         ManageObject manager = new ManageObject();
         String fullPath = "Chapter27" + separator + "practice" + separator + "serial.obj"; // 저장할 파일의 위치와 파일명
-//        SerialDTO dto = new SerialDTO("GodOfJavaBook", 1, true, 100);
-//        manager.saveObject(fullPath, dto);
+        SerialDTO dto = new SerialDTO("GodOfJavaBook", 1, true, 100);
+        manager.saveObject(fullPath, dto);
         manager.loadObject(fullPath);
     }
 
